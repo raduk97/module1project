@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles3.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ol>
+                <li class="home-li"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ol>
+        </nav>
+    </header>
+    <div class="note-header">
+        <h1 id="note-title">Notes App</h1>
+        <div>
+            <button class="add-btn" onclick="openNoteDialog()">Add Note 📝</button>
+        </div>
+    </div>
+    <main id="notesContainer" class="notes-grid"></main>
+    <dialog id="noteDialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
+                <button class="close-btn" onclick="closeNoteDialog()">X</button>
+            </div>
+            
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="noteTitle" class="form-label">Title</label>
+                    <input type="text" name="noteTitle" id="noteTitle" class="form-input" placeholder="Enter note title here...." required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="noteContent" class="form-label">Content</label>
+                    <textarea name="noteContent" id="noteContent" class="form-textarea" placeholder="Type your note here..." autocomplete="off"></textarea>
+                </div>
+                
+                <div class="dialog-actions">
+                    <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Cancel</button>
+                    <button type="submit" class="save-btn">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>

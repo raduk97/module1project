@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  background-color: #11121a;
+  border-bottom: 1px solid #272832
+}
+nav ol{
+  list-style: none;
+  display: flex;
+}
+nav .home-li{
+  margin-right: auto;
+}
+nav li{
+  display: flex;
+}
+nav a{
+  display: flex;
+  text-decoration: none;
+  color: #c9c9c9;
+  padding: 1em 2em;
+  transition: background-color 150ms ease;
+}
+nav a:hover{
+  background-color: #272832;
+}
+nav a.active-link{
+  border-bottom: 2px solid  #c9c9c9
+}
+nav a.accent-link{
+  background-color: #0071FF;
+}
